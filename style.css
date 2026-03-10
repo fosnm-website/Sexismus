@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', Georgia, serif;
+    line-height: 1.2;
+    color: #3d2645;
+    background-color: #fce4ec;
+}
+
+header {
+    background: linear-gradient(135deg, #d946a6 0%, #ec407a 100%);
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(217, 70, 166, 0.2);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.navbar {
+    background-color: #ad1457;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(173, 20, 87, 0.2);
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ffb3d9;
+}
+
+main {
+    max-width: 900px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background: #fff0f6;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(217, 70, 166, 0.1);
+    border-left: 4px solid #d946a6;
+}
+
+section h2 {
+    color: #ad1457;
+    margin-bottom: 1.2rem;
+    font-size: 1.8rem;
+    border-bottom: 2px dashed #d946a6;
+    padding-bottom: 0.5rem;
+}
+
+section h3 {
+    color: #ad1457;
+    margin-top: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+section h4 {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+section p {
+    margin-bottom: 0.8rem;
+    text-align: left;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+section ul {
+    margin-left: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+section li {
+    margin-bottom: 0.4rem;
+}
+
+.info-box {
+    background-color: #f8bbd0;
+    border: 2px dotted #d946a6;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.info-box h4 {
+    color: #ad1457;
+    margin-bottom: 0.8rem;
+}
+
+.impact-card {
+    background-color: #fce4ec;
+    border-left: 3px solid #d946a6;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 2px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-card:hover {
+    transform: translateX(3px);
+    box-shadow: 0 2px 8px rgba(217, 70, 166, 0.2);
+}
+
+.impact-card h3 {
+    color: #ad1457;
+    margin-top: 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.stat {
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+    border: 2px solid #ad1457;
+    border-radius: 3px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(217, 70, 166, 0.2);
+}
+
+.stat h4 {
+    color: #3d2645;
+    margin-bottom: 0.5rem;
+}
+
+.stat-number {
+    font-size: 2rem;
+    color: #ad1457;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+.stat p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+}
+
+.bereich {
+    background-color: #fce4ec;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+    border-left: 3px solid #d946a6;
+}
+
+.bereich h3 {
+    color: #ad1457;
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+.bereich p {
+    margin-bottom: 0.6rem;
+}
+
+.consequence {
+    background: linear-gradient(to right, #fff0f6 0%, #f8bbd0 100%);
+    border-left: 3px solid #d946a6;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 3px;
+}
+
+.consequence h3 {
+    color: #ad1457;
+    margin-top: 0;
+}
+
+.reality-box {
+    background: linear-gradient(135deg, #ad1457 0%, #d946a6 100%);
+    color: #fff;
+    border-left: 0;
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.reality-box h2 {
+    color: #ffb3d9;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.reality-box p {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    text-align: center;
+    color: #fff;
+}
+
+.reality-box strong {
+    font-weight: 700;
+}
+
+.facts-list {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.facts-list li {
+    background: rgba(248, 187, 208, 0.4);
+    padding: 0.6rem 1rem;
+    margin: 0.4rem 0;
+    border-radius: 3px;
+    border-left: 2px solid #f8bbd0;
+    font-size: 0.95rem;
+}
+
+.stat-highlight {
+    background-color: rgba(217, 70, 166, 0.08);
+    padding: 0.6rem;
+    border-left: 2px solid #d946a6;
+    margin-top: 0.6rem !important;
+    font-style: italic;
+    color: #3d2645;
+}
+
+footer {
+    background-color: #ad1457;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.4rem 0;
+    color: #ddd;
+}
+
+.form-section {
+    background: #fff0f6;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(217, 70, 166, 0.1);
+    border-left: 4px solid #d946a6;
+}
+
+.form-section h2 {
+    color: #ad1457;
+    margin-bottom: 1rem;
+}
+
+.form-section p {
+    color: #3d2645;
+    margin-bottom: 1.5rem;
+}
+
+.form-section iframe {
+    width: 100%;
+    border-radius: 2px;
+}
+
+/* Responsives Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .navbar {
+        gap: 0.5rem;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .navbar a {
+        display: inline-block;
+        padding: 0.4rem 0.8rem;
+        background-color: #ad1457;
+        border-radius: 2px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.3rem;
+    }
+
+    main {
+        margin: 1rem auto;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem 0.8rem;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .subtitle {
+        font-size: 0.85rem;
+    }
+
+    section {
+        padding: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    section h2 {
+        font-size: 1.1rem;
+    }
+
+    section h3 {
+        font-size: 1rem;
+    }
+}
