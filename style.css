@@ -5,56 +5,90 @@
 }
 
 body {
-    font-family: 'Arial', Georgia, serif;
-    line-height: 1.2;
+    font-family: 'Calibri', 'Arial', sans-serif;
+    line-height: 1.4;
     color: #3d2645;
     background-color: #fce4ec;
 }
 
+/* cleaner layout for sections */
+section {
+    border: 1px solid #d946a6;
+} 
+
 header {
     background: linear-gradient(135deg, #d946a6 0%, #ec407a 100%);
     color: #fff;
-    padding: 2rem 1rem;
-    text-align: left;
-    box-shadow: 0 4px 8px rgba(217, 70, 166, 0.2);
+    padding: 3rem 1rem 4rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(217, 70, 166, 0.3);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 120%;
+    height: 140%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.15), transparent 70%);
+    transform: rotate(30deg);
 }
 
 header h1 {
-    font-size: 2.2rem;
+    font-size: 3rem;
     margin-bottom: 0.5rem;
-    font-weight: 700;
-    letter-spacing: 2px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .subtitle {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-style: italic;
-    opacity: 0.9;
+    opacity: 0.85;
+    margin-bottom: 1rem;
 }
 
+.byline {
+    font-size: 0.9rem;
+    font-style: normal;
+    opacity: 0.7;
+    margin-top: 0.2rem;
+    text-align: right;
+} 
+
 .navbar {
-    background-color: #ad1457;
-    padding: 0.8rem;
+    background-color: transparent;
+    padding: 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.6rem;
+    margin-top: 1rem;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 4px rgba(173, 20, 87, 0.2);
 }
 
 .navbar a {
+    background-color: rgba(255,255,255,0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
     color: #fff;
-    text-decoration: underline;
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .navbar a:hover {
-    color: #ffb3d9;
-}
+    background-color: rgba(255,255,255,0.4);
+    transform: scale(1.05);
+} 
 
 main {
     max-width: 900px;
@@ -252,6 +286,13 @@ section li {
     font-size: 0.95rem;
 }
 
+.source {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.2rem;
+    display: block;
+}
+
 .stat-highlight {
     background-color: rgba(217, 70, 166, 0.08);
     padding: 0.6rem;
@@ -286,6 +327,22 @@ footer p {
 .form-section h2 {
     color: #ad1457;
     margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.form-section a {
+    display: inline-block;
+    background-color: #d946a6;
+    color: #fff;
+    padding: 0.8rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.form-section a:hover {
+    background-color: #ec407a;
 }
 
 .form-section p {
@@ -301,20 +358,18 @@ footer p {
 /* Responsives Design */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
 
     .navbar {
-        gap: 0.5rem;
+        gap: 0.4rem;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
     }
 
     .navbar a {
-        display: inline-block;
         padding: 0.4rem 0.8rem;
-        background-color: #ad1457;
-        border-radius: 2px;
+        font-size: 0.9rem;
     }
 
     .stats-grid {
@@ -332,19 +387,24 @@ footer p {
     main {
         margin: 1rem auto;
     }
-}
+} 
 
 @media (max-width: 480px) {
     header {
-        padding: 1rem 0.8rem;
+        padding: 2rem 0.8rem 3rem;
     }
 
     header h1 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .subtitle {
         font-size: 0.85rem;
+    }
+
+    .navbar a {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.6rem;
     }
 
     section {
