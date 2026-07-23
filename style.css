@@ -291,11 +291,13 @@ footer p {
 @media (max-width: 768px) {
     header {
         padding: 2.5rem 1rem 1.5rem;
+        clip-path: none;
     }
 
     .navbar {
         flex-direction: column;
         align-items: stretch;
+        position: static;
         padding: 0.5rem 1rem;
     }
 
