@@ -113,6 +113,17 @@ header h1 {
     transform: translateY(-2px);
 }
 
+.navbar .survey-link {
+    border-color: #b7e4c7;
+    background-color: #2e8b57;
+    color: var(--color-white);
+}
+
+.navbar .survey-link:hover,
+.navbar .survey-link:focus-visible {
+    background-color: #247447;
+}
+
 main {
     max-width: var(--content-width);
     margin: 2rem auto;
@@ -301,12 +312,19 @@ footer p {
     .navbar {
         flex-direction: column;
         align-items: stretch;
-        position: static;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        margin-top: 1rem;
         padding: 0.5rem 1rem;
     }
 
     .navbar a {
-        padding: 0.4rem 0.7rem;
+        display: flex;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 0.7rem;
         text-align: center;
     }
 
